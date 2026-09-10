@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&family=VT323&display=swap" rel="stylesheet">
 
     <title>Meu Portifolio</title>
 </head>
@@ -18,8 +17,23 @@
 <body>
 
     <header>
-        <img src="img/logojc 1.svg" alt="logojc" class="logo">
-        <nav>
+        <div class="header-logo">
+        
+            <h1 class="nome-logo">J<span>Dev</span></h1>
+
+            <video class="logo" autoplay loop muted playsinline>
+                <source src="img/alienmonster_vetorpng.webm" type="video/webm">
+            </video>
+
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="navMenu">
             <a href="#inicio">Início</a>
             <a href="#projetos">Projetos</a>
             <a href="#sobre">Sobre</a>
@@ -33,8 +47,14 @@
         <p>e por transformar problemas em sistemas funcionais e intuitivos.</p>
         <p>Atualmente estudando e desenvolvendo projetos com Java,</p>
         <p>bancos de dados e tecnologias web.</p>
-        <button>Ver meus projetos</button>
-        <button>Entre em contato</button>
+        
+        <a href="#projetos">
+            <button>Ver meus projetos</button>
+        </a>
+
+        <a href="#contato">
+            <button>Entre em contato</button>
+        </a>
     </div>
 
     <div class="logoFerramentas">
@@ -61,8 +81,13 @@
                     <span>Collections</span>
                 </div>
                 <div class="projeto1-botoes">
-                    <button>Ver projetos</button>
-                    <button>GitHub</button>
+                    <a href="https://github.com/josecarlosalvesjunior-crypto/sgeac.git" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">Ver projetos</button>
+                    </a>
+
+                    <a href="https://github.com/josecarlosalvesjunior-crypto" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">GitHub</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -81,8 +106,13 @@
                     <span>SQL</span>
                 </div>
                 <div class="projeto2-botoes">
-                    <button>Ver projetos</button>
-                    <button>GitHub</button>
+                    <a href="https://github.com/josecarlosalvesjunior-crypto/agendserv.git" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">Ver projetos</button>
+                    </a>
+
+                    <a href="https://github.com/josecarlosalvesjunior-crypto" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">GitHub</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -100,8 +130,13 @@
                     <span>JavaScript</span>
                 </div>
                 <div class="projeto3-botoes">
-                    <button>Ver projetos</button>
-                    <button>GitHub</button>
+                    <a href="https://github.com/josecarlosalvesjunior-crypto/fit_academia.git" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">Ver projetos</button>
+                    </a>
+
+                    <a href="https://github.com/josecarlosalvesjunior-crypto" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">GitHub</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -118,8 +153,13 @@
                     <span>Exercícios</span>
                 </div>
                 <div class="projeto4-botoes">
-                    <button>Ver projetos</button>
-                    <button>GitHub</button>
+                    <a href="https://github.com/josecarlosalvesjunior-crypto/labolatorio-java.git" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">Ver projetos</button>
+                    </a>
+
+                    <a href="https://github.com/josecarlosalvesjunior-crypto" target="_blank" rel="noopener noreferrer">
+                        <button class="botao-git">GitHub</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -178,14 +218,14 @@
 
 
                 <!-- GitHub -->
-                <a href="#" class="contato">
+                <a href="https://github.com/josecarlosalvesjunior-crypto" target="_blank" rel="noopener noreferrer" class="contato">
                     <div class="img_icone">
                         <img src="img/logo_github.png" alt="logo_github">
                     </div>
 
                     <div class="contato-texto">
                         <h3>GitHub</h3>
-                        <p>github.com/J1910-DEV</p>
+                        <p>github.com/josecarlosalvesjunior-crypto</p>
                     </div>
                 </a>
 
@@ -205,6 +245,18 @@
             </div>
 
         </div>
+        
+    </footer>
+
+     <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const navMenu = document.getElementById('navMenu');
+
+        botaoMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('ativo');
+            botaoMenu.classList.toggle('ativo');
+        });
+    </script>
 
 </body>
 
